@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Likes vs comments in each category" },
+    "data": {
+      "url": "https://raw.githubusercontent.com/Gooseboy21/Youtuber_poopularity_dataset/main/new_Youtube_Data.csv"
+    },
+
+"mark": {"type": "point", "clip": true, "tooltip": {"content": "data"}},
+"encoding": {
+"x": {
+    
+    "field": "avgLikes",
+    "type": "quantitative",
+    "scale": {"domain": [0, 1000000]}
+},
+"y": { 
+    "field": "avgComments",
+    "type": "quantitative",
+    "title": "average no. of comments",
+    "scale": {"domain": [0, 50000]}
+},
+"color": {"field": "Country", "type": "nominal"}
+
+}}

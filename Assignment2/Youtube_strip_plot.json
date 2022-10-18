@@ -1,0 +1,25 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Distribution of Categories per Country",
+    "data": {"url": "https://raw.githubusercontent.com/Gooseboy21/Youtuber_poopularity_dataset/main/new_Youtube_Data.csv"},
+    
+    "transform": [
+        {
+            "joinaggregate": [{"op": "values", "field": "avgLikes", "as": "Total"}],
+            "groupby": ["Name"]
+        }, 
+        {
+            "window": [{"op": "rank", "as": "Rank"}],
+            "sort": [{"field": "Total", "order": "descending"}]
+        },
+        {"filter": "datum.Rank <= 5"}
+
+      ],
+    "mark": {"type": "point", "tooltip": true, "clip": true, "size": 100},
+
+    "encoding": {
+      "x": {"field": "avgLikes", "type": "quantitative", "scale": {"domain": [0, 20000]}},
+      "y": {"field": "Country", "type": "ordinal"},
+      "color": {"field": "Category_2"}
+    }
+  }

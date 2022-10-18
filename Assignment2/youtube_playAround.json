@@ -1,0 +1,13 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Youtube Analysis" },
+    "data": {
+      "url": "https://raw.githubusercontent.com/mdhrumil/Top-5000-Youtube-channels-Data-Engineering/master/data.csv"
+      
+    },
+    "mark": "point",
+    "encoding": {
+      "x": { "field": "Video Uploads", "type": "quantitative"},
+      "y": { "field": "Subscribers", "type": "quantitative" }
+    }
+  }

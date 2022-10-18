@@ -1,0 +1,35 @@
+    {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "top5_avgLikes" },
+    "data": {
+      "url": "https://raw.githubusercontent.com/Gooseboy21/Youtuber_poopularity_dataset/main/new_Youtube_Data.csv"
+    },
+
+    "transform": [
+      {"joinaggregate": [{"op": "sum", "field": "avgLikes", "as": "Total"}],
+      "groupby": ["Name"]
+    },
+      {
+        "window": [{"op": "rank", "as": "rank"}],
+        "sort": [{"field": "Total", "order": "descending"}]
+      },
+
+      {"filter": "datum.rank <= 5"}
+    ],
+
+    "mark": {"type": "bar", "tooltip": true, "color": "#FF0000" },
+    "encoding": {
+      
+      "y": {
+        "field": "Name",
+         "type": "nominal",
+         "sort": "-x"
+         },
+
+      "x": {
+      "field": "avgLikes",
+      "type": "quantitative"
+      
+    }
+    }
+  }

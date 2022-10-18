@@ -1,0 +1,101 @@
+*{ 
+    margin: 0; 
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+a{ 
+    text-decoration: none;
+    color: #5a5a5a;
+}
+img{ 
+
+    cursor: pointer;
+}
+.flex-div{ 
+    display: flex;
+    align-items: centre;
+
+}
+nav{ 
+    padding: 10px, 2%;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background: #fff;
+    position: static;
+    top: 0; 
+    z-index: 10;
+}
+.nav-left .menu-icon{ 
+    margin-top: 55px;
+    margin-left: 25px;
+    background-color: transparent;
+
+}
+.nav-left .logo{
+    position: relative;
+    top: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+.nav-middle{ 
+    position: relative;
+    right: 150px;
+    top: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+.sidebar img{
+
+    margin-top: 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.Top10_Youtubers{
+    position: relative;
+    left: 220px;
+    bottom: 500px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.heatmap{
+    position: relative;
+    left: 140px;
+    bottom: 500px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.globe{
+    position: relative;
+    right: 580px;
+    bottom: 310px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.Pie_Chart{
+    position: relative;
+    left: 620px;
+    bottom:660px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+}
+.strip_plot{
+    position: relative;
+    left: 170px;
+    bottom: 900px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    cursor: move;
+
+}
+.Comparisons{ 
+    position: relative;
+    left: 750px; 
+    bottom: 400px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.top5_avgLikes{
+    position: relative;
+    left: 230px; 
+    bottom: 650px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+}

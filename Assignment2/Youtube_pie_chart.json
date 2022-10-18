@@ -1,0 +1,29 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Most popular categories",
+    "data": {
+      "url": "https://raw.githubusercontent.com/Gooseboy21/Youtuber_poopularity_dataset/main/new_Youtube_Data.csv"
+    },
+
+    "transform": [
+        {
+            "joinaggregate": [{"op": "sum", "field": "Subscribers", "as": "Total"}],
+            "groupby": ["Name"]
+        }, 
+        {
+            "window": [{"op": "rank", "as": "Rank"}],
+            "sort": [{"field": "Total", "order": "descending"}]
+        },
+        {"filter": "datum.Rank <= 6"}
+
+      ],
+
+    "mark": "arc",
+    "encoding": {
+      "theta": {"field": "Total", "type": "quantitative"},
+      "color": {"field": "Category_2", "type": "nominal" },
+      "tooltip":[ {"field": "Category_2", "type": "nominal"},
+      {"field": "Subscribers", "type": "quantitative", "title": "total viewership"}]
+      
+    }
+  }

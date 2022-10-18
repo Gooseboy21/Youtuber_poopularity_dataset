@@ -1,0 +1,38 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Likes vs Views vs total subscribers" },
+    "data": {
+      "url": "https://raw.githubusercontent.com/Gooseboy21/Youtuber_poopularity_dataset/main/new_Youtube_Data.csv"
+    },
+
+    "mark": {"type": "rect", "clip": true}, 
+    "encoding": {
+        "x":{
+            "bin": {"maxbins": 800},
+            "field": "avgLikes",
+            "type": "quantitative",
+            "scale": {"domain": [0, 250000]}
+        },
+        "y":{ 
+            "bin": {"maxbins": 800},
+            "field": "avgViews",
+            "type": "quantitative",
+            "scale": {"domain": [0, 2500000]}
+        },
+        "color": {
+            "field": "Subscribers",
+            "type": "quantitative",
+            "scale": {"type": "threshold", "domain": [ 1000000, 5000000,10000000, 25000000,50000000,800000000 ], "range": ["#ffe6e6", "#ffcccc", "#ff9999","#ff6666","#ff3333", "#FF0000"]}
+        },
+        "tooltip":[ {"field": "Name", "type": "nominal"},
+        {"field": "Subscribers", "type": "quantitative"}
+
+    ] 
+    },
+    "config": {
+        "view":{
+            "stroke": "transparent"
+        }
+    }
+
+    }

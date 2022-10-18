@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="Data_vis2.js"></script>
+
+    <title> Youtube Data Visualisation  </title>
+</head> 
+
+<body>
+
+    <nav class = "flex-div">
+        <div class="nav-left flex-div">
+            <img src = "images/youtube_menu_icon.png" width="35" height="25" class = menu-icon>
+            <img src = "images/Youtube_full_logo.png" width="175" height="40" class = logo>
+
+        </div>
+        <div class="nav-middle flex-div">
+            <img src="images/Youtube_searchbar.png" width="500" height = "60" >
+            
+        </div>
+
+
+        <div class="nav-right"></div>
+    </nav>
+    <!--   Sidebar -->
+    <div class="sidebar">
+        <img src = "images/sidebar image.png" width="200", height="400">
+    </div>
+
+            <!-- DATA VISUALISATIONS-->
+
+
+    <div id="Top10_Youtubers" class = "Top10_Youtubers" width = "300"></div>
+
+    <div class = "top5_avgLikes" id="top5_avgLikes" ></div>
+
+    <div id="Comparisons" class = "Comparisons"></div>
+
+    <div id="average_views_of_the_top_channels_per_country" class = "globe"></div>
+
+    <div id="heatmap" class="heatmap"></div>
+
+    <div id="Pie_Chart" class = "Pie_Chart"></div>
+
+    <div id="strip_plot" class = "strip_plot" draggable="true"></div>
+
+    
+
+</body>
+
+</html>
